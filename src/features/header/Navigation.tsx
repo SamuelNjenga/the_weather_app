@@ -2,9 +2,8 @@ import { Avatar } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ServiceDropdownMenu from "./../services/ServiceDropdownMenu";
 import "./Navigation.css";
-
-
 
 const Navigation = () => {
   const [scrollY, setScrollY] = useState<number>(0);
@@ -49,7 +48,6 @@ const Navigation = () => {
             aria-controls="responsive-navbar-nav"
             className="navbar-toggler"
           >
-            
             <span>
               MENU
               <i className="bi bi-list"></i>
@@ -66,14 +64,7 @@ const Navigation = () => {
               >
                 HOME
               </Nav.Link>
-              <Nav.Link
-                eventKey={2}
-                className="nav-link-class"
-                to="/services"
-                as={Link}
-              >
-                SERVICES
-              </Nav.Link>
+              <ServiceDropdownMenu />
               <Nav.Link
                 eventKey={3}
                 className="nav-link-class"

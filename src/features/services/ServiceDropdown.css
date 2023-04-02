@@ -1,0 +1,25 @@
+.nav-link-class {
+  display: block !important;
+  padding: 0.5rem 1rem !important;
+  /* color: rgb(251, 3, 3) !important; */
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out !important;
+  font-family: "Lato", sans-serif !important;
+  font-size: 1.1rem !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link-class {
+    transition: none !important;
+  }
+}
+.nav-link-class:hover,
+.nav-link-class:focus {
+  color: #cca000 !important;
+}
+
+.margin-bottom {
+  /* padding-bottom: 1rem; */
+}
