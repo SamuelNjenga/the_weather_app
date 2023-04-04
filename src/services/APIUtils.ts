@@ -3,7 +3,7 @@ import { API_BASE_URL } from "../constants";
 
 const API_KEY: string = import.meta.env.VITE_API_KEY;
 
-export const getRealtimeData = async (location) => {
+export const getRealtimeData = async (location: string) => {
   return axios.get(
     `${API_BASE_URL}/current.json?key=${API_KEY}&q=${location}&aqi=no`
   );
