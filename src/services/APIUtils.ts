@@ -1,11 +1,11 @@
 import axios from "axios";
 import { API_BASE_URL } from "../constants";
 
-const API_KEY: string = import.meta.env.API_KEY;
+const API_KEY: string = import.meta.env.VITE_API_KEY;
 
-export const getRealtimeData = async () => {
+export const getRealtimeData = async (location) => {
   return axios.get(
-    `${API_BASE_URL}/current.json?key=${API_KEY}&q=London&aqi=no`
+    `${API_BASE_URL}/current.json?key=${API_KEY}&q=${location}&aqi=no`
   );
 };
 
