@@ -37,25 +37,25 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
     <div>
       <Card sx={{ minWidth: 275 }}>
         <CardContent>
-          <Typography variant="h5" component="div">
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
             Name of area : <LocationOn sx={{ color: grey[500] }} />
             {name}, {country}
           </Typography>
-          <Typography>
-            Current time is
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+            Currently the time is{"  "}
             <Chip
               label={`${moment(localtime).format("MMMM Do YYYY, h:mm:ss a")}`}
             />
           </Typography>
-          <Typography variant="h5" component="div">
-            Name of region : {region}
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+            Name of region is {region}
           </Typography>
-          <Typography variant="h5" component="div">
-            Area's longitude : {lon} Area's latitude : {lat}
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+            Area's longitude is {lon} & the Area's latitude is {lat}
           </Typography>
         </CardContent>
       </Card>
-
+      <Divider />
       <Card>
         <Box sx={{ p: 2, display: "flex" }}>
           <Avatar variant="rounded" src={icon} />
@@ -69,8 +69,10 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography>The Current Temperature Stats</Typography>
-          <Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+            The Current Temperature Stats
+          </Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
             Temperature in celcius is <Chip label={temp_c} /> and the
             Temperature in Fahrenheit is <Chip label={temp_f} />
           </Typography>
@@ -81,8 +83,10 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography>The Current Wind Stats</Typography>
-          <Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+            The Current Wind Stats
+          </Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
             Wind speed in kph is <Chip label={wind_kph} /> and the Wind speed in
             mph is <Chip label={wind_mph} />
             .The wind direction is <Chip label={wind_dir} />
@@ -94,8 +98,10 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography>The Current Atmosphere Pressure Stats</Typography>
-          <Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+            The Current Atmosphere Pressure Stats
+          </Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
             Atmospheric pressure in mb is <Chip label={pressure_mb} /> and the
             Atmospheric pressure in in is <Chip label={pressure_in} />
           </Typography>
@@ -106,8 +112,10 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography>The Current Precipitation Stats</Typography>
-          <Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+            The Current Precipitation Stats
+          </Typography>
+          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
             Precipitation in mm is <Chip label={precip_mm} /> and the
             Precipitation in in is <Chip label={precip_in} />
           </Typography>

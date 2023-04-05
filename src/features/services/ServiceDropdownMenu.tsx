@@ -11,25 +11,25 @@ interface ServiceDropdownMenuProps {
 const ServiceDropdownMenu = (props: ServiceDropdownMenuProps) => {
   const { setExpanded } = props;
   return (
-      <DropdownButton
-        id="dropdown-button-dark-example2"
-        variant="secondary"
-        menuVariant="dark"
-        title="SERVICES"
-        className="nav-link-class"
+    <DropdownButton
+      id="dropdown-button-dark-example2"
+      variant="secondary"
+      menuVariant="dark"
+      title="SERVICES"
+      className="nav-link-class"
+    >
+      <Dropdown.Item
+        as={Link}
+        to={`/service-realtime`}
+        onClick={() => setExpanded(false)}
       >
-        <Dropdown.Item
-          as={Link}
-          to={`/service-realtime`}
-          onClick={() => setExpanded(false)}
-        >
-          Astronomy Weather
-        </Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Realtime Weather</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Forecast Weather</Dropdown.Item>
-        <Dropdown.Divider />
-        <Dropdown.Item href="#/action-4">Others</Dropdown.Item>
-      </DropdownButton>
+        Realtime Weather
+      </Dropdown.Item>
+      <Dropdown.Item href="#/action-2">Astronomy Weather</Dropdown.Item>
+      <Dropdown.Item href="#/action-3">Forecast Weather</Dropdown.Item>
+      <Dropdown.Divider />
+      <Dropdown.Item href="#/action-4">Others</Dropdown.Item>
+    </DropdownButton>
   );
 };
 
