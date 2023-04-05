@@ -41,11 +41,10 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
             Name of area : <LocationOn sx={{ color: grey[500] }} />
             {name}, {country}
           </Typography>
-          <Typography variant="h5" component="div">
+          <Typography>
+            Current time is
             <Chip
-              label={`The Current time is ${moment(localtime).format(
-                "MMMM Do YYYY, h:mm:ss a"
-              )}`}
+              label={`${moment(localtime).format("MMMM Do YYYY, h:mm:ss a")}`}
             />
           </Typography>
           <Typography variant="h5" component="div">

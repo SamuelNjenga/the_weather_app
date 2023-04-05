@@ -4,9 +4,13 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import { Link } from "react-router-dom";
 import "./ServiceDropdown.css";
 
-const ServiceDropdownMenu = () => {
+interface ServiceDropdownMenuProps {
+  setExpanded: (expanded: boolean) => void;
+}
+
+const ServiceDropdownMenu = (props: ServiceDropdownMenuProps) => {
+  const { setExpanded } = props;
   return (
-    <>
       <DropdownButton
         id="dropdown-button-dark-example2"
         variant="secondary"
@@ -14,7 +18,11 @@ const ServiceDropdownMenu = () => {
         title="SERVICES"
         className="nav-link-class"
       >
-        <Dropdown.Item as={Link} to={`/service-realtime`}>
+        <Dropdown.Item
+          as={Link}
+          to={`/service-realtime`}
+          onClick={() => setExpanded(false)}
+        >
           Astronomy Weather
         </Dropdown.Item>
         <Dropdown.Item href="#/action-2">Realtime Weather</Dropdown.Item>
@@ -22,7 +30,6 @@ const ServiceDropdownMenu = () => {
         <Dropdown.Divider />
         <Dropdown.Item href="#/action-4">Others</Dropdown.Item>
       </DropdownButton>
-    </>
   );
 };
 

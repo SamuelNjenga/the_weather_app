@@ -5,17 +5,18 @@ import { Link } from "react-router-dom";
 import ServiceDropdownMenu from "./../services/ServiceDropdownMenu";
 import "./Navigation.css";
 
-const Navigation = () => {
+const Navigation = (): JSX.Element => {
   const [scrollY, setScrollY] = useState<number>(0);
+  const [expanded, setExpanded] = useState<boolean>(false);
 
-  function logit() {
+  const logit = (): void => {
     setScrollY(window.pageYOffset);
-  }
+  };
 
   useEffect(() => {
-    function watchScroll() {
+    const watchScroll = (): void => {
       window.addEventListener("scroll", logit);
-    }
+    };
     watchScroll();
     // Remove listener (just like componentWillUnmount)
     return () => {
@@ -34,6 +35,7 @@ const Navigation = () => {
           padding: scrollY > 40 ? "10px 10px" : "12px 10px",
           transition: "0.4s",
         }}
+        expanded={expanded}
       >
         <Container>
           <Navbar.Brand>
@@ -47,6 +49,7 @@ const Navigation = () => {
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             className="navbar-toggler"
+            onClick={() => setExpanded(!expanded)}
           >
             <span>
               MENU
@@ -61,15 +64,17 @@ const Navigation = () => {
                 className="nav-link-class"
                 to="/"
                 as={Link}
+                onClick={() => setExpanded(false)}
               >
                 HOME
               </Nav.Link>
-              <ServiceDropdownMenu />
+              <ServiceDropdownMenu setExpanded={setExpanded} />
               <Nav.Link
                 eventKey={3}
                 className="nav-link-class"
                 to="/portfolio"
                 as={Link}
+                onClick={() => setExpanded(false)}
               >
                 PORTFOLIO
               </Nav.Link>
@@ -78,6 +83,7 @@ const Navigation = () => {
                 eventKey={4}
                 to="/about"
                 as={Link}
+                onClick={() => setExpanded(false)}
               >
                 ABOUT
               </Nav.Link>
@@ -86,6 +92,7 @@ const Navigation = () => {
                 eventKey={5}
                 to="/contact"
                 as={Link}
+                onClick={() => setExpanded(false)}
               >
                 CONTACT
               </Nav.Link>
