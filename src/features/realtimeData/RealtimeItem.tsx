@@ -89,6 +89,30 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
             .The wind direction is <Chip label={wind_dir} />
           </Typography>
         </Stack>
+        <Divider />
+        <Stack
+          direction="column"
+          justifyContent="flex-start"
+          sx={{ px: 2, py: 1, bgcolor: "background.default" }}
+        >
+          <Typography>The Current Atmosphere Pressure Stats</Typography>
+          <Typography>
+            Atmospheric pressure in mb is <Chip label={pressure_mb} /> and the
+            Atmospheric pressure in in is <Chip label={pressure_in} />
+          </Typography>
+        </Stack>
+        <Divider />
+        <Stack
+          direction="column"
+          justifyContent="flex-start"
+          sx={{ px: 2, py: 1, bgcolor: "background.default" }}
+        >
+          <Typography>The Current Precipitation Stats</Typography>
+          <Typography>
+            Precipitation in mm is <Chip label={precip_mm} /> and the
+            Precipitation in in is <Chip label={precip_in} />
+          </Typography>
+        </Stack>
       </Card>
     </div>
   );
