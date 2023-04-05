@@ -66,27 +66,28 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
         </Box>
         <Divider />
         <Stack
-          direction="row"
-          alignItems="center"
+          direction="column"
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography>The Current Temperature</Typography>
-          <Chip
-            label={`Temperature in celcius is ${temp_c} and the Temperature in Fahrenheit is ${temp_f}`}
-          />
+          <Typography>The Current Temperature Stats</Typography>
+          <Typography>
+            Temperature in celcius is <Chip label={temp_c} /> and the
+            Temperature in Fahrenheit is <Chip label={temp_f} />
+          </Typography>
         </Stack>
         <Divider />
         <Stack
-          direction="row"
-          alignItems="center"
+          direction="column"
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
           <Typography>The Current Wind Stats</Typography>
-          <Chip
-            label={`Wind speed in kph is ${wind_kph} and the Wind speed in mph is ${wind_mph}. The wind direction is ${wind_dir}`}
-          />
+          <Typography>
+            Wind speed in kph is <Chip label={wind_kph} /> and the Wind speed in
+            mph is <Chip label={wind_mph} />
+            .The wind direction is <Chip label={wind_dir} />
+          </Typography>
         </Stack>
       </Card>
     </div>
