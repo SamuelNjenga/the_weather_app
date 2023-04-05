@@ -1,6 +1,7 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { Link } from "react-router-dom";
 import "./ServiceDropdown.css";
 
 const ServiceDropdownMenu = () => {
@@ -13,7 +14,9 @@ const ServiceDropdownMenu = () => {
         title="SERVICES"
         className="nav-link-class"
       >
-        <Dropdown.Item href="#/action-1">Astronomy Weather</Dropdown.Item>
+        <Dropdown.Item as={Link} to={`/service-realtime`}>
+          Astronomy Weather
+        </Dropdown.Item>
         <Dropdown.Item href="#/action-2">Realtime Weather</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Forecast Weather</Dropdown.Item>
         <Dropdown.Divider />
