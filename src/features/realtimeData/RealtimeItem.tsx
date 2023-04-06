@@ -44,6 +44,7 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
             Currently the time is{"  "}
             <Chip
+              color="primary"
               label={`${moment(localtime).format("MMMM Do YYYY, h:mm:ss a")}`}
             />
           </Typography>
@@ -73,8 +74,9 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
             The Current Temperature Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
-            Temperature in celcius is <Chip label={temp_c} /> and the
-            Temperature in Fahrenheit is <Chip label={temp_f} />
+            Temperature in celcius is <Chip label={temp_c} color="primary" />{" "}
+            and the Temperature in Fahrenheit is{" "}
+            <Chip label={temp_f} color="primary" />
           </Typography>
         </Stack>
         <Divider />
@@ -87,9 +89,9 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
             The Current Wind Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
-            Wind speed in kph is <Chip label={wind_kph} /> and the Wind speed in
-            mph is <Chip label={wind_mph} />
-            .The wind direction is <Chip label={wind_dir} />
+            Wind speed in kph is <Chip label={wind_kph} color="primary" /> and
+            the Wind speed in mph is <Chip label={wind_mph} color="primary" />
+            .The wind direction is <Chip label={wind_dir} color="primary" />
           </Typography>
         </Stack>
         <Divider />
@@ -102,8 +104,9 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
             The Current Atmosphere Pressure Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
-            Atmospheric pressure in mb is <Chip label={pressure_mb} /> and the
-            Atmospheric pressure in in is <Chip label={pressure_in} />
+            Atmospheric pressure in mb is{" "}
+            <Chip label={pressure_mb} color="primary" /> and the Atmospheric
+            pressure in in is <Chip label={pressure_in} color="primary" />
           </Typography>
         </Stack>
         <Divider />
@@ -116,8 +119,9 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
             The Current Precipitation Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
-            Precipitation in mm is <Chip label={precip_mm} /> and the
-            Precipitation in in is <Chip label={precip_in} />
+            Precipitation in mm is <Chip label={precip_mm} color="primary" />{" "}
+            and the Precipitation in in is{" "}
+            <Chip label={precip_in} color="primary" />
           </Typography>
         </Stack>
       </Card>
