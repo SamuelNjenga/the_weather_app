@@ -37,6 +37,9 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
     <div>
       <Card sx={{ minWidth: 275 }}>
         <CardContent>
+          <Typography fontWeight={600} fontFamily="'Poppins', sans-serif">
+            The Location's Stats
+          </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
             Name of area : <LocationOn sx={{ color: grey[500] }} />
             {name}, {country}
@@ -58,6 +61,13 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
       </Card>
       <Divider />
       <Card>
+        <Typography
+          fontWeight={600}
+          fontFamily="'Poppins', sans-serif"
+          sx={{ p: 2 }}
+        >
+          The Overall Sky Outlook
+        </Typography>
         <Box sx={{ p: 2, display: "flex" }}>
           <Avatar variant="rounded" src={icon} />
           <Stack spacing={0.5}>
@@ -70,7 +80,7 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+          <Typography fontWeight={600} fontFamily="'Poppins', sans-serif">
             The Current Temperature Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
@@ -85,7 +95,7 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+          <Typography fontWeight={600} fontFamily="'Poppins', sans-serif">
             The Current Wind Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
@@ -100,7 +110,7 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+          <Typography fontWeight={600} fontFamily="'Poppins', sans-serif">
             The Current Atmosphere Pressure Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
@@ -115,7 +125,7 @@ const RealtimeItem = ({ realtimeData }: RealtimeData) => {
           justifyContent="flex-start"
           sx={{ px: 2, py: 1, bgcolor: "background.default" }}
         >
-          <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
+          <Typography fontWeight={600} fontFamily="'Poppins', sans-serif">
             The Current Precipitation Stats
           </Typography>
           <Typography fontWeight={500} fontFamily="'Poppins', sans-serif">
