@@ -9,9 +9,9 @@ export const getRealtimeData = async (location: string) => {
   );
 };
 
-export const getAstronomyData = async () => {
+export const getAstronomyData = async (location: string) => {
   return axios.get(
-    `${API_BASE_URL}/astronomy.json?key=${API_KEY}&q=KENYA&dt=2023-04-02`
+    `${API_BASE_URL}/astronomy.json?key=${API_KEY}&q=${location}&dt=2023-04-02`
   );
 };
 

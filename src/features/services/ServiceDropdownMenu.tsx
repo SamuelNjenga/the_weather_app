@@ -20,12 +20,18 @@ const ServiceDropdownMenu = (props: ServiceDropdownMenuProps) => {
     >
       <Dropdown.Item
         as={Link}
+        to={`/service-astronomy`}
+        onClick={() => setExpanded(false)}
+      >
+        Astronomy Weather
+      </Dropdown.Item>
+      <Dropdown.Item
+        as={Link}
         to={`/service-realtime`}
         onClick={() => setExpanded(false)}
       >
         Realtime Weather
       </Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Astronomy Weather</Dropdown.Item>
       <Dropdown.Item href="#/action-3">Forecast Weather</Dropdown.Item>
       <Dropdown.Divider />
       <Dropdown.Item href="#/action-4">Others</Dropdown.Item>
