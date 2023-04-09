@@ -6,7 +6,27 @@ import React, { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ClipLoader } from "react-spinners";
 
-const Breakdown = ({ hour }) => {
+interface Hour {
+  time: string;
+  condition: {
+    icon: string;
+    text: string;
+  };
+  temp_c: number;
+  temp_f: number;
+  wind_kph: number;
+  wind_mph: number;
+  wind_dir: string;
+  pressure_mb: number;
+  pressure_in: number;
+  precip_mm: number;
+  precip_in: number;
+}
+
+interface Props {
+  hour: Hour[];
+}
+const Breakdown = ({ hour }: Props) => {
   const [hasMore, setHasMore] = useState<boolean>(true); // Set this to true since there may be more data to fetch
   const [displayCount, setDisplayCount] = useState<number>(4); // Set this to the number of items to display at once
   const [isLoading, setIsLoading] = useState<boolean>(false);
