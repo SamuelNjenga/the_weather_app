@@ -15,8 +15,8 @@ export const getAstronomyData = async (location: string) => {
   );
 };
 
-export const getForecastData = async () => {
+export const getForecastData = async (location: string) => {
   return axios.get(
-    `${API_BASE_URL}/forecast.json?key=${API_KEY}&q=KENYA&days=1&aqi=no&alerts=no`
+    `${API_BASE_URL}/forecast.json?key=${API_KEY}&q=${location}&days=1&aqi=no&alerts=no`
   );
 };
