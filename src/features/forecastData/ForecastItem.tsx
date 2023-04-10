@@ -162,7 +162,7 @@ const ForecastItem = ({ forecastData }: ForecastData) => {
           </Typography>
         </Stack>
       </Card>
-      <Typography fontWeight={600} fontFamily="'Poppins', sans-serif">
+      <Typography fontWeight={700} fontFamily="'Poppins', sans-serif" variant="h4" align="center">
         A 24 hour based breakdown of the Forecast
       </Typography>
       <Breakdown hour={hour} />
