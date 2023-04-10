@@ -2,9 +2,15 @@ import { Avatar, Box, Chip, Divider, Stack, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import moment from "moment";
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ClipLoader } from "react-spinners";
+
+const override: CSSProperties = {
+  display: "block",
+  margin: "10px",
+  padding: "10px",
+};
 
 interface Hour {
   time: string;
@@ -33,16 +39,14 @@ const Breakdown = ({ hour }: Props) => {
 
   const fetchMoreData = () => {
     if (displayCount >= hour.length) {
-      setHasMore(false); // Disable infinite scrolling when all items are displayed
+      setHasMore(false); 
       return;
     }
 
-    // Show loading message after 6 items are displayed
     if (displayCount >= 4 && !isLoading) {
       setIsLoading(true);
     }
 
-    // Increase the number of items to display by 6
     setTimeout(() => {
       setDisplayCount(displayCount + 4);
       setIsLoading(false);
@@ -55,7 +59,9 @@ const Breakdown = ({ hour }: Props) => {
         dataLength={displayCount}
         next={fetchMoreData}
         hasMore={hasMore}
-        loader={isLoading && <ClipLoader color="#36d7b7" />}
+        loader={
+          isLoading && <ClipLoader color="#36d7b7" cssOverride={override} />
+        }
         endMessage={<h4>No more forecast items</h4>}
       >
         {hour?.slice(0, displayCount).map((item) => {
