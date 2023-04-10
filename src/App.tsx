@@ -1,19 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import { RealtimeDataProvider } from "./contexts/RealtimeData";
 import { AstronomyDataProvider } from "./contexts/AstronomyData";
 import { ForecastDataProvider } from "./contexts/ForecastData";
-
+import { RealtimeDataProvider } from "./contexts/RealtimeData";
+import AstronomyDataList from "./features/astronomyData/AstronomyDataList";
+import Footer from "./features/footer/Footer";
+import ForecastDataList from "./features/forecastData/ForecastDataList";
 import Navigation from "./features/header/Navigation";
 import Main from "./features/pages/Main";
 import RealtimeDataList from "./features/realtimeData/RealtimeDataList";
-import AstronomyDataList from './features/astronomyData/AstronomyDataList';
-import ForecastDataList from './features/forecastData/ForecastDataList';
 
 const App = () => {
   return (
-    <div>
+    <div style={{ position: "relative", minHeight: "100vh" }}>
       <ForecastDataProvider>
         <AstronomyDataProvider>
           <RealtimeDataProvider>
@@ -38,6 +37,8 @@ const App = () => {
           </RealtimeDataProvider>
         </AstronomyDataProvider>
       </ForecastDataProvider>
+      <div style={{ padding: "30px" }}></div>
+      <Footer />
     </div>
   );
 };
